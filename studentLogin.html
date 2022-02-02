@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <link rel="stylesheet" href="../studentLogin.css">
+ 
+<title>student login page</title>
+</head>
+<body>
+<div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+	<form class="box" th:action="@{/stdhome}" >
+                
+                <center><h4>Student Login</h4></center> 
+                <input type="text" placeholder="Enter Username" id="username" required>
+                <input type="password" placeholder="Enter password" id="password" required>
+                <input type="submit"  value="Login">
+                <a href="#" class="bad">Forgot password?</a><br>
+                <a th:href="@{/stdregister}">Register</a>
+    
+            </form>
+            <footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>
+</body>
+</html>

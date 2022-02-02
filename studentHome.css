@@ -1,0 +1,146 @@
+@CHARSET "ISO-8859-1";
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-size: auto;
+    background-image: url(../images/ems.jpg);
+    background-position:inherit;
+    font-family: sans-serif;
+}
+.header {
+  text-align: justify;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(16, 57, 90);
+  
+}
+
+.menu-bar{
+   position: fixed;
+    top: 80px;
+    left: 20px;
+    bottom: 70px;
+    width:  300px;
+    border-radius: 10px;
+    /* border-left: 5px solid #324fd3;ś */
+    background: #e5d995;
+    
+}
+.menu-bar ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+.menu-bar ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.menu-bar ul li:hover
+{
+    background: rgb(231, 192, 114);
+    /* text-shadow: #4d5bf9;    */
+}
+.menu-bar ul li:hover a{
+    color: #000000;
+}
+.menu-bar ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 251, 251);
+}
+
+.menu-bar ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+}
+.menu-bar ul li a .icon ion-icon
+{
+    font-size: 1.5em;
+}
+.menu-bar ul li a  .title
+{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+/* .sidebar ul li.active
+{
+    background: azure;
+
+}
+.sidebar ul li.active a
+{
+    color: black;
+} */
+.toggle
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #4d5bf9;
+    border-radius: 10px;
+    /* cursor: pointer; */
+    align-items: center;
+}
+.toggle.active
+{
+    color: rgb(255, 43, 85);
+}
+.toggle ion-icon
+{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+}
+.toggle ion-icon.open,
+.toggle.active ion-icon.close
+{
+    display: block;
+}
+.toggle ion_icon .close,
+.toggle.active ion-icon.open
+{
+    display: none;
+}#page-footer {
+    /* (A1) FIXED AT BOTTOM */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* (A2) DIMENSIONS */
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    /* (A3) CENTER TEXT */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #page-footer { background: #d1f9ff; }

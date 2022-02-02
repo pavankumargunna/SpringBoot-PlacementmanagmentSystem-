@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scal=1.0">
+        <link rel="stylesheet" href="../viewCompany.css">
+
+        <title>web page</title>
+   </head>
+   <body>
+   <div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+   <center>
+       <table border="1" cellpadding="10">
+       <h1>Company's List</h1>
+        <thead>
+            <tr bgcolor="skyblue">
+                <th>Company ID</th>
+                <th>Company Name</th>
+                <th>Profile</th>
+                <th>Salary </th>
+                <th>Location</th>
+                <th>Eligibility</th>
+				 <th>No of Position</th>
+				 <th>Action</th>
+            </tr>
+        </thead>
+        </center>
+       <tbody bgcolor="lightgreen">
+       <center>
+            <tr th:each="company : ${listcom}">
+                <td th:text="${company.id}">Company ID</td>
+                <td th:text="${company.company_name}">Company Name</td>
+                <td th:text="${company.profile}">Profile</td>
+                <td th:text="${company.salary}">Salary</td>
+                <td th:text="${company.location}">Location</td>
+				<td th:text="${company.eligiblty}">Elgibility</td>
+				 <td th:text="${company.no_of_postion}">No of Position</td>
+                <td>
+                 <a th:href="@{/apply}">Apply</a>
+                </td>
+            </tr>
+            </center>
+        </tbody>
+    </table>
+    <footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>
+</body>
+</html>

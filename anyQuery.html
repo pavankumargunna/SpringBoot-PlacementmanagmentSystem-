@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="widtd=device-widtd, initial-scal=1.0">
+        <link rel="stylesheet" href="../anyQuery.css">
+ 
+        <title>query</title>
+    </head>
+    <body>
+    <div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+       <h1 style="color: white; text-align:left;">Query</h1>
+     <div>
+             <br>
+             <br>
+             <br>
+        <form th:action="@{/stdhome}" th:object="${query}" method="post">
+        <table>
+            <tr>
+                <th style="color: pink; text-align:right;">Name :</th>
+            <td><input type="text" th:field="*{name}" placeholder="Enter Your Full Name" class="box" ></td>
+            </tr>
+            <br>
+            <br>
+            <tr>
+                <th style=" color: pink; text-align:right;">Query :</th>
+                <td><textarea name="text" th:field="*{message}" placeholder="Enter Your Query" class="box" id="" cols="50" rows="3" ></textarea></td>
+            </tr>
+            <br>
+            <br>  
+            <tr>         
+            <td><input type="submit" value="Submit" class="btn"></td>
+            </tr>
+            </table>
+        </form>
+        </div>
+        <footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>
+        </body>
+        </html>

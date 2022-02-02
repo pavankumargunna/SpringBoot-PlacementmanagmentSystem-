@@ -1,0 +1,130 @@
+@CHARSET "ISO-8859-1";
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;  
+    background-image: url(../images/login.jpg);
+    background-size: cover;
+    font-family: cursive ;
+}
+.header {
+    text-align: justify;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(16, 57, 90);
+    
+    
+}
+.register{
+	
+  
+    width: 40%;
+    height: 65%;
+    left: 75%;
+    opacity: 80%;
+    border-radius: 10px;
+    rotate: inherit;
+    position: absolute;
+    background-color: rgba(229, 247, 127, 0.493);
+    transform: translate(-50%,30%);
+}
+.register h4{
+    padding: 14px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: block;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-weight: 700;
+}  
+.register input[type="text"]
+{
+    margin-left: calc(32%);
+    padding: 14px 10px;
+    color: rgba(253, 206, 119, 0.774);
+    background-color: black;
+    border-radius: 5px;
+    border-color: black;    
+}
+.register input[type="number"]
+{
+    margin-left: calc(25%);
+    padding: 14px 10px;
+    color: rgba(253, 206, 119, 0.774);
+    background-color: black;
+    border-radius: 5px;
+    border-color: black;    
+}
+.register input[type="password"]
+{
+    margin-left: calc(32%);
+    padding: 14px 10px;
+    color: rgba(253, 206, 119, 0.774);
+    background-color: black;
+    border-radius: 5px;
+    border-color: black;    
+}
+.register input[type="submit"]
+{
+    background: rgba(231, 187, 66, 0.705);
+    margin: 10px auto;
+    border: blanchedalmond;
+    display: block;
+    padding: 14px 10px;
+    width: 200px;  
+    border-radius: 5px;
+}
+.register input[type="checkbox"]
+{
+    margin: 10px;
+    display: block; 
+    width: 350px;
+
+}
+.register p
+{
+    margin-left: 120px;
+}
+ span
+{
+    display: block;
+    padding: 14px 10px;
+    width: 200px; 
+}
+.register button[type="submit"]
+{
+    display: block; 
+    width: 90px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(231, 187, 66, 0.705);
+    margin: auto;
+}
+.register button[type="submit"]:hover
+{
+    
+    background: #03e9f4;
+}
+#page-footer {
+    /* (A1) FIXED AT BOTTOM */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* (A2) DIMENSIONS */
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    /* (A3) CENTER TEXT */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #page-footer { background: #d1f9ff; }

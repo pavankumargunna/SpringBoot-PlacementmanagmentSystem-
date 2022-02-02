@@ -1,0 +1,115 @@
+@CHARSET "ISO-8859-1";
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: url("../images/hiring.jpeg");
+    /* background-color: rgb(14, 13, 90); */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.header {
+  text-align: justify;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(16, 57, 90);
+  
+}
+.menu-bar
+{
+    background-color: rgb(77, 166, 194);
+    background: linear-gradient(rgb(236, 84, 84),rgba(42, 42, 241, 0.4));
+    text-align: center;
+    display: flex;
+    justify-content: end;   
+}
+
+.menu-bar ul
+{
+    display: flex;
+    list-style: none;
+    color: #fff;
+    text-align: left;
+}
+
+.menu-bar ul li
+{
+    width: 150px;
+    margin: 15px;
+    padding: 10px;
+
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-bar ul li a:hover
+{
+    background: rgb(218, 221, 221);
+    color: rgba(0, 0, 0, 0.4);
+    padding: 8px;
+    border-radius: 10px;
+}
+.contact {
+    top: 0;
+  }
+  
+  .contact .heading {
+      font-family: sans-serif;
+      text-transform: capitalize;
+      padding: 20px;
+    color: #fff
+  }
+  
+  
+  .contact form {
+    width: 50%;
+    height: 8%;
+    left: 50%;
+    opacity: 80%;
+    border-radius: 10px;
+    rotate: inherit;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.493);
+    transform: translate(-50%,30%);
+  }
+  
+  .contact form h3 {
+    font-size: 2.5rem;
+    color: rgb(207, 105, 105);
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .contact  form .box {
+    margin: .5rem 0;
+    width: 100%;
+    /* border-bottom: var(--border); */
+    font-size: 1.3rem;
+    background: #fff;
+  }
+ #page-footer {
+    /* (A1) FIXED AT BOTTOM */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* (A2) DIMENSIONS */
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    /* (A3) CENTER TEXT */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #page-footer { background: #d1f9ff; }

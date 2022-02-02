@@ -1,0 +1,58 @@
+@CHARSET "ISO-8859-1";
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+ background-image: url("../images/login.jpg");
+    background-color: lightsteelblue;
+    background-size: auto;
+    background-position: center;
+    font-family: sans-serif;
+    
+}
+.header {
+  text-align: justify;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(16, 57, 90);
+  
+}
+h1{
+    margin-top: 80px;
+    margin-left: 780px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-style: italic;
+    color:black;
+}
+
+.btn{
+    margin-left: 220px;
+    margin-top: 90px;
+    height: 40px;
+    width: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+ #page-footer {
+    /* (A1) FIXED AT BOTTOM */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* (A2) DIMENSIONS */
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    /* (A3) CENTER TEXT */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #page-footer { background: #d1f9ff; }
+

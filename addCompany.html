@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body
+{
+	
+     background-image: url("../images/login.jpg");
+    background-color: lightsteelblue;
+    background-size: auto;
+    background-position: center;
+    font-family: sans-serif;
+}
+.header {
+  text-align: justify;
+    padding: 5px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(16, 57, 90);
+  
+}
+.sidebar{
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    bottom: 70px;
+    width:  300px;
+    border-radius: 10px;
+    /* border-left: 5px solid #324fd3;ś */
+    background: #e5d995;
+    
+}
+.sidebar ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+.sidebar ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.sidebar ul li:hover
+{
+    background: rgb(231, 192, 114);
+    /* text-shadow: #4d5bf9;    */
+}
+.sidebar ul li:hover a{
+    color: #000000;
+}
+.sidebar ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 251, 251);
+}
+
+.sidebar ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+}
+.sidebar ul li a .icon ion-icon
+{
+    font-size: 1.5em;
+}
+.sidebar ul li a  .title
+{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+/* .sidebar ul li.active
+{
+    background: azure;
+
+}
+.sidebar ul li.active a
+{
+    color: black;
+} */
+.toggle
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #4d5bf9;
+    border-radius: 10px;
+    /* cursor: pointer; */
+    align-items: center;
+}
+.toggle.active
+{
+    color: rgb(255, 43, 85);
+}
+.toggle ion-icon
+{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+}
+.toggle ion-icon.open,
+.toggle.active ion-icon.close
+{
+    display: block;
+}
+.toggle ion_icon .close,
+.toggle.active ion-icon.open
+{
+    display: none;
+}
+.register{
+    width: 50%;
+    height: 0%;
+    left: 50%;
+    opacity: 80%;
+    border-radius: 10px;
+    rotate: inherit;
+    position: absolute;
+    background-color: rgba(229, 247, 127, 0.493);
+    transform: translate(-50%,30%);
+}
+  
+.register input[type="text"]
+{
+    margin-left: calc(32%);
+    padding: 14px 10px;
+    color: lightblue;
+    font-size: 100%;
+    background-color: rgb(87, 85, 85);
+    border-radius: 5px;  
+}
+
+
+
+.register button
+{
+
+    width: 90px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.705);
+  
+}
+.register button:hover
+{
+    color: lightblue;
+    background: #000000;
+}
+table {
+  position: relative;
+    margin-top: 10px;
+    margin-left: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    border-style: groove;
+    border-radius: inherit;
+    height: 400px;
+    width: 500px;
+    background-color: antiquewhite;
+}
+
+th, td {
+   margin: 20px;
+    padding: 5px;
+    margin-left: 20px;
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+#page-footer {
+    /* (A1) FIXED AT BOTTOM */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* (A2) DIMENSIONS */
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    /* (A3) CENTER TEXT */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #page-footer { background: #d1f9ff; }
+
+</style>
+</head>
+<body>
+
+<body>
+	<div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+<div class="sidebar">
+		<ul>
+			<li class="list active"><a th:href="@{/admhome}">
+					<span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+					<span class="title">Home</span>
+			</a> <li class="list">
+                <a th:href="@{/addcom}">
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Add company</span>
+                </a>   </li>
+            <li class="list">
+                <a th:href="@{view}">
+                    <span class="icon"><ion-icon name="eye-outline"></ion-icon></span>
+                    <span class="title">View company</span>
+                </a></li>
+			<li class="list"><a th:href="@{/adddrv}"> <span
+					class="icon"><ion-icon name="person-add-outline"></ion-icon>
+						</ion-icon></span> <span class="title">Add Drive</span>
+			</a></li>
+			<li class="list"><a th:href="@{/viewdrv}"> <span
+					class="icon"><ion-icon name="eye-outline"></ion-icon></span> <span
+					class="title">View Drive</span>
+			</a></li>
+			<li class="list"><a th:href="@{/viewquery}"> <span
+					class="icon"><ion-icon name="eye-outline"></ion-icon></span> <span
+					class="title">View Query</span>
+					
+			</a></li>
+		</ul>
+
+	</div>
+
+	<script type="module"
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<form th:action="@{/save}" th:object="${company}"  method="post" class="register">
+    
+<table>
+    <tr>
+      <th style="width:50%">Details</th>
+   
+    </tr>
+    <tr>
+      <td>Company name</td>
+      <td><input type="text"  th:field="*{company_name}"required></td>
+    </tr>
+    <tr>
+      <td>Profile</td>
+      <td><input type="text"  th:field="*{profile}"required></td>
+    </tr>
+    <tr>
+      <td>Salary</td>
+      <td><input type="text"  th:field="*{salary}"required></td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td><input type="text"  th:field="*{location}"required></td>
+    </tr>
+    <tr>
+      <td>Eligiblty</td>
+      <td><input type="text"  th:field="*{eligiblty}"required></td>
+    </tr>
+    <tr>
+      <td>Number Of Positions</td>
+      <td><input type="text"  th:field="*{no_of_postion}"required></td>
+  </tr>
+  </table>
+
+<center><button type="submit">Submit</button>
+<button type="reset">Clear</button></center>
+</form>
+<footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>
+</body>
+</html>

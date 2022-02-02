@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scal=1.0">
+        <link rel="stylesheet" href="../addDrive.css">
+<title>Add Drive</title>
+</head>
+<body>
+<body>
+	<div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+<div class="sidebar">
+		<ul>
+			<li class="list active"><a th:href="@{/admhome}">
+					<span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+					<span class="title">Home</span>
+			</a> <li class="list">
+                <a th:href="@{/addcom}">
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Add company</span>
+                </a>   </li>
+            <li class="list">
+                <a th:href="@{view}">
+                    <span class="icon"><ion-icon name="eye-outline"></ion-icon></span>
+                    <span class="title">View company</span>
+                </a></li>
+			<li class="list"><a th:href="@{/adddrv}"> <span
+					class="icon"><ion-icon name="person-add-outline"></ion-icon>
+						</ion-icon></span> <span class="title">Add Drive</span>
+			</a></li>
+			<li class="list"><a th:href="@{/viewdrv}"> <span
+					class="icon"><ion-icon name="eye-outline"></ion-icon></span> <span
+					class="title">View Drive</span>
+			</a></li>
+			<li class="list"><a th:href="@{/viewquery}"> <span
+					class="icon"><ion-icon name="eye-outline"></ion-icon></span> <span
+					class="title">View Query</span>
+					
+			</a></li>
+		</ul>
+
+	</div>
+
+	<script type="module"
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+	<form th:action="@{/savee}" th:object="${drive}"  method="post" >
+    
+<table>
+    <tr>
+      <th style="width:50%">Details</th>
+   
+    </tr>
+    <tr>
+      <td>Company name</td>
+      <td><input type="text"  th:field="*{company_name}"required></td>
+    </tr>
+    <tr>
+      <td>Mode of Drive</td>
+      <td><input type="text"  th:field="*{mode_of_drive}"required></td>
+    </tr>
+    <tr>
+      <td>Salary</td>
+      <td><input type="text"  th:field="*{salary}"required></td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td><input type="text"  th:field="*{date}"required></td>
+    </tr>
+    
+  </table>
+<center><button type="submit">Submit</button>
+<button type="reset">Clear</button></center>
+
+</form>
+<footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>
+</body>
+</html>

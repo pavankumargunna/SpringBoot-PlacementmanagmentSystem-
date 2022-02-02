@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="widtd=device-widtd, initial-scal=1.0">
+        <link rel="stylesheet" href="../applyCompany.css">
+ 
+        <title>Create login page</title>
+    </head>
+    <body>
+
+       <div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+
+        <form th:action="@{/succes}" th:object="${apply}" class="register" method="post">
+            
+        <table>
+            <tr >
+              <td style="width:50%">First Name</td>
+              <td ><input type="text" th:field="*{firstName}"></td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td><input type="text" th:field="*{last_name}"></td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td><input type="email" th:field="*{email}"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="number" th:field="*{phone_no}"></td>
+            </tr>
+            <tr>
+              <td>Alternate Phone Number</td>
+              <td><input type="number" th:field="*{alternate_phone_no}"></td>
+          </tr>
+            <tr>
+              <td><input type="checkbox" name="male" id="">Male</td>
+              <td><input type="checkbox" name="female" id="">Female</td>
+            </tr>
+        
+            <tr>
+              <td>Address</td>
+              <td><textarea name="" class="box" id="" cols="20" rows="10" th:field="*{address}" ></textarea></td>
+            </tr>
+            <tr>
+              <td>Highest Qualification</td>
+              <td><input type="text" th:field="*{qualification}"></td>
+            </tr>
+            <tr>
+              <td>Highest Qualification Branch</td>
+              <td><input type="text"  th:field="*{branch}" required></td>
+          </tr>
+          
+            <tr>
+              <td>Highest Qualification Percentage</td>
+              <td><input type="text" th:field="*{qualification_percentage}" required></td>
+          </tr>
+          <tr>
+            <td>Highest Qualification Passed Out Year</td>
+            <td><input type="text" th:field="*{qualification_poy}" required></td>
+        </tr>
+          <tr>
+            <td>12th or Diploma Percentage</td>
+            <td><input type="text" th:field="*{XIIth_percentage}" required></td>
+        </tr>
+        <tr>
+          <td>12th or Diploma Passed Out Year</td>
+          <td><input type="text" th:field="*{XIIth_poy}" required></td>
+      </tr>
+        <tr>
+          <td>10th Percentage</td>
+          <td><input type="text" th:field="*{Xth_percentage}" required></td>
+      </tr>
+      <tr>
+        <td>10th Passed Out Year</td>
+        <td><input type="text" th:field="*{Xth_poy}" required></td>
+    </tr>
+          
+          </table>
+        <center>
+          <br>
+        <button type="submit">Submit</button>
+      </center>
+        </form>
+        <footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>
+    </body>
+</html>

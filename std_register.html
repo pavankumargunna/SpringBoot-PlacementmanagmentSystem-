@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <link rel="stylesheet" href="../std_register.css">
+ 
+        <title>Create login page</title>
+    </head>
+    <body>
+     <div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+     <form class="register" th:action="@{/stdlogin}" th:object="${student}" method="post">
+        <center><h4>Enter The Student  Info</h4></center> 
+       First Name:<input type="text"  placeholder="First Name" th:field="*{First_name}" required>
+        <br>
+     Last Name:<input type="text"  placeholder="Last Name" th:field="*{Last_name}" required>
+        <br>
+        Email ID:<input type="text"  placeholder="Email-Id" th:field="*{email}" required>
+        <br>
+       Phone Number:<input type="number" placeholder="Phone Number" th:field="*{Phone_no}" required>
+        <br>
+        Password:<input type="password" placeholder="enter password" th:field="*{Password}"  required>
+        <button type="submit">Create </button>
+    </form>
+   
+    </body>
+    <footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>
+</html>

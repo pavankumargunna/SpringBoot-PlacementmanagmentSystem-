@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scal=1.0">
+        <link rel="stylesheet" href="../viewDrive.css">
+
+<title>View Drive</title>
+</head>
+<body>
+<div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+<div class="sidebar">
+		<ul>
+			<li class="list active"><a th:href="@{/admhome}">
+					<span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+					<span class="title">Home</span>
+			</a> <li class="list">
+                <a th:href="@{/addcom}">
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Add company</span>
+                </a>   </li>
+            <li class="list">
+                <a th:href="@{view}">
+                    <span class="icon"><ion-icon name="eye-outline"></ion-icon></span>
+                    <span class="title">View company</span>
+                </a></li>
+			<li class="list"><a th:href="@{/adddrv}"> <span
+					class="icon"><ion-icon name="person-add-outline"></ion-icon>
+						</ion-icon></span> <span class="title">Add Drive</span>
+			</a></li>
+			<li class="list"><a th:href="@{/viewdrv}"> <span
+					class="icon"><ion-icon name="eye-outline"></ion-icon></span> <span
+					class="title">View Drive</span>
+			</a></li>
+			<li class="list"><a th:href="@{/viewquery}"> <span
+					class="icon"><ion-icon name="eye-outline"></ion-icon></span> <span
+					class="title">View Query</span>
+					
+			</a></li>
+		</ul>
+
+	</div>
+
+	<script type="module"
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	 <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Company ID</th>
+                <th>Company Name</th>
+                <th>Mode Of Drive</th>
+                <th>Salary </th>
+                 <th>Date </th>
+              </tr>
+          </thead>
+           <tbody>
+            <tr th:each="drive : ${listDrive}">
+                <td th:text="${drive.id}">Company ID</td>
+                <td th:text="${drive.company_name}">Company Name</td>
+                <td th:text="${drive.mode_of_drive}">Mode Of Drive</td>
+                <td th:text="${drive.salary}">Salary</td>
+                <td th:text="${drive.date}">date</td>
+                <td>
+                    <a th:href="@{'/editt/' + ${drive.id}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/deletee/' + ${drive.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>
+</body>
+</html>

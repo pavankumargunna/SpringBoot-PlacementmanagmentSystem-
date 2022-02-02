@@ -1,0 +1,105 @@
+
+
+
+@CHARSET "ISO-8859-1";
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background :rgb(181, 201, 199);
+
+}
+.header {
+  text-align: justify;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(16, 57, 90);
+  
+}
+h2
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    font-size: 50px;
+    color: rgb(39, 55, 196);
+    padding-left: 550px;
+}
+.register{
+    width: 50%;
+    height: 0%;
+    left: 50%;
+    opacity: 80%;
+    border-radius: 10px;
+    rotate: inherit;
+    position: absolute;
+    background-color: rgba(229, 247, 127, 0.493);
+    transform: translate(-50%,30%);
+}
+  
+.register input
+{
+    margin-left: calc(32%);
+    padding: 14px 10px;
+    color: lightblue;
+    font-size: 100%;
+    background-color: rgb(87, 85, 85);
+    border-radius: 5px;  
+}
+
+
+.register button
+{
+
+    width: 90px;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+    background-color: rgb(39, 55, 196);
+  
+}
+.register button:hover
+{
+    color: rgb(248, 246, 246);
+    background: rgb(0, 0, 0) ;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+#page-footer {
+    /* (A1) FIXED AT BOTTOM */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* (A2) DIMENSIONS */
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    /* (A3) CENTER TEXT */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #page-footer { background: #d1f9ff; }

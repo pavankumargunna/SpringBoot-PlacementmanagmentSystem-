@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scal=1.0">
+        <link rel="stylesheet" href="../viewDrive.css">
+
+        <title>web page</title>
+   </head>
+   <body>
+   <div class="header" id="myHeader">
+    <h4>PSM Placement Management Team</h4>
+      </div>
+   <center>
+   <table border="1" cellpadding="10">
+   <h1>Drive's List</h1>
+        <thead>
+            <tr bgcolor="lightgreen">
+                <th>Company ID</th>
+                <th>Company Name</th>
+                <th>Mode Of Drive</th>
+                <th>Salary </th>
+                 <th>Date </th>
+                 <th>Action</th>
+              </tr>
+          </thead>
+          </center>
+           <tbody bgcolor="lightblue">
+           <center>
+            <tr th:each="drive : ${listdrv}">
+                <td th:text="${drive.id}">Company ID</td>
+                <td th:text="${drive.company_name}">Company Name</td>
+                <td th:text="${drive.mode_of_drive}">Mode Of Drive</td>
+                <td th:text="${drive.salary}">Salary</td>
+                <td th:text="${drive.date}">date</td>
+                <td>
+                    <a th:href="@{/apply}">Apply</a>
+                </td>
+            </tr>
+            </center>
+        </tbody>
+    </table>
+			
+    <footer id="page-footer">Copyright:-PSM Placement Management Team@pvt.Lmt</footer>             
+    
+            
+   </body>
+</html>
